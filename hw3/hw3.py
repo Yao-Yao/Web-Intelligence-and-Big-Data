@@ -28,7 +28,7 @@ for lists in os.listdir(dataDir):
             words = [w for w in title.split() if not w in allStopWords.keys()]
             for author in authors:
                 if author in datasource:
-                    datasource[author] += words
+                    datasource[author] += words # += is equivalent to append()
                 else:
                     datasource[author] = words
         infile.close()
